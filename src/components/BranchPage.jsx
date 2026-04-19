@@ -1,8 +1,8 @@
-import { useParams, Link } from 'react-router-dom'
-import { FaArrowLeft, FaMapMarkerAlt, FaPhoneAlt, FaClock, FaUser, FaDumbbell, FaRulerCombined, FaCamera } from 'react-icons/fa'
+import { useEffect } from 'react'
+import { useParams, Link, useLocation } from 'react-router-dom'
+import { FaArrowLeft, FaMapMarkerAlt, FaPhoneAlt, FaClock, FaUser, FaDumbbell, FaRulerCombined, FaCamera, FaWhatsapp } from 'react-icons/fa'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
-import FloatingActions from './FloatingActions.jsx'
 import ContactForm from './ContactForm.jsx'
 
 const branches = [
@@ -21,8 +21,18 @@ const branches = [
     },
     specs: {
       area: '2500 sq ft',
-      equipment: 'Olympic weight sets, cardio machines, functional training area',
-      facilities: 'Locker rooms, showers, sauna, nutrition bar',
+      equipment: [
+        'Olympic weight sets',
+        'Advanced cardio machines',
+        'Functional training area',
+        'Squat racks & Smith machines'
+      ],
+      facilities: [
+        'Premium locker rooms',
+        'Showers & Steam bath',
+        'Nutrition & Protein bar',
+        'Dedicated posing area'
+      ],
       capacity: '50 members per session'
     },
     plans: [
@@ -31,10 +41,10 @@ const branches = [
       { name: 'Premium', price: '₹3999/mo', features: ['All Standard', 'Unlimited classes', 'VIP support'] }
     ],
     images: [
-      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1583454110551-21f0e0b968cf?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1594737625785-40e59764b6ee?auto=format&fit=crop&w=900&q=80'
+      'https://images.unsplash.com/photo-1583416750470-965b2707b355?auto=format&fit=crop&w=900&q=80', // Steam Bath
+      'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=900&q=80', // Gym Bag & Locker
+      'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=900&q=80', // Changing Room
+      'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80'  // Modern Fitness Kit
     ],
     trainers: [
       {
@@ -75,8 +85,18 @@ const branches = [
     },
     specs: {
       area: '2200 sq ft',
-      equipment: 'Free weights, treadmills, cross-trainers, yoga mats',
-      facilities: 'Changing rooms, parking, cafe, recovery zone',
+      equipment: [
+        'Free weights & Dumbbells',
+        'Treadmills & Rowers',
+        'Cross-trainers & Ellipticals',
+        'Yoga & Stretching mats'
+      ],
+      facilities: [
+        'Clean changing rooms',
+        'Reserved parking area',
+        'Healthy Cafe zone',
+        'Recovery & Massage zone'
+      ],
       capacity: '45 members per session'
     },
     plans: [
@@ -85,8 +105,8 @@ const branches = [
       { name: 'Premium', price: '₹3999/mo', features: ['All Standard', 'Unlimited classes', 'VIP support'] }
     ],
     images: [
-      'https://images.unsplash.com/photo-1508873699372-7ae51b0b7b2a?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1546484959-f4f151daa5fa?auto=format&fit=crop&w=900&q=80',
+      'https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=900&q=80', // Free Weights
+      'https://images.unsplash.com/photo-1540496905036-5937c10647cc?auto=format&fit=crop&w=900&q=80', // Cardio & Treadmills
       'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80',
       'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80'
     ],
@@ -118,7 +138,19 @@ const branches = [
 
 function BranchPage() {
   const { branchId } = useParams()
+  const location = useLocation()
   const branch = branches.find(b => b.id === branchId)
+
+  useEffect(() => {
+    if (location.hash === '#contact') {
+      const el = document.getElementById('contact')
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100)
+      }
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [location])
 
   if (!branch) {
     return (
@@ -138,11 +170,13 @@ function BranchPage() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="hero-section" style={{ minHeight: '60vh', backgroundImage: `linear-gradient(180deg, rgba(6, 7, 8, 0.85), rgba(6, 7, 8, 0.88)), url(${branch.images[0]})` }}>
+        <section className="hero-section" style={{ minHeight: '100vh', backgroundImage: `linear-gradient(180deg, rgba(6, 7, 8, 0.85), rgba(6, 7, 8, 0.88)), url(${branch.images[0]})` }}>
           <div className="container hero-content">
-            <Link to="/" className="btn btn-outline-accent mb-3">
-              <FaArrowLeft className="me-2" /> Back to Home
-            </Link>
+            <div className="mb-5">
+              <Link to="/" className="btn btn-outline-accent">
+                <FaArrowLeft className="me-2" /> Back to Home
+              </Link>
+            </div>
             <h1 className="hero-title">{branch.title}</h1>
             <p className="hero-copy">
               Experience premium fitness at our {branch.title.toLowerCase()}.
@@ -175,21 +209,49 @@ function BranchPage() {
         {/* Details Section */}
         <section className="container">
           <div className="row gy-5">
-            <div className="col-lg-6" data-aos="fade-right">
+            <div className="col-lg-6 d-flex flex-column" data-aos="fade-right">
               <h2 className="section-title mb-4">Branch Details</h2>
               <div className="card-glass p-4 mb-4">
                 <h5 className="mb-3">Manager Details</h5>
                 <p className="small-text mb-2"><FaUser className="me-2" /> {branch.manager.name}</p>
                 <p className="small-text mb-2"><FaPhoneAlt className="me-2" /> {branch.manager.phone}</p>
-                <p className="small-text mb-0">Email: {branch.manager.email}</p>
+                <p className="small-text mb-3">Email: {branch.manager.email}</p>
+                <a
+                  href={`https://wa.me/${branch.manager.phone.replace(/\D/g, '')}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-sm w-100 mb-2 text-white rounded-pill"
+                  style={{ backgroundColor: '#25D366', border: 'none', fontWeight: '600' }}
+                >
+                  <FaWhatsapp className="me-2 fs-5" style={{ marginBottom: '2px' }} /> Chat on WhatsApp
+                </a>
+                <a
+                  href={`tel:${branch.manager.phone.replace(/\D/g, '')}`}
+                  className="btn btn-sm w-100 text-white rounded-pill"
+                  style={{ backgroundColor: '#ff4d4d', border: 'none', fontWeight: '600' }}
+                >
+                  <FaPhoneAlt className="me-2" /> Call Manager
+                </a>
               </div>
 
-              <div className="card-glass p-4 mb-4">
+              <div className="card-glass p-4 mb-4 flex-grow-1">
                 <h5 className="mb-3">Gym Specifications</h5>
-                <p className="small-text mb-2"><FaRulerCombined className="me-2" /> Area: {branch.specs.area}</p>
-                <p className="small-text mb-2"><FaDumbbell className="me-2" /> Equipment: {branch.specs.equipment}</p>
-                <p className="small-text mb-2">Facilities: {branch.specs.facilities}</p>
-                <p className="small-text mb-0">Capacity: {branch.specs.capacity}</p>
+                <p className="small-text mb-2"><FaRulerCombined className="me-2" /> <strong>Area:</strong> {branch.specs.area}</p>
+                <p className="small-text mb-3"><strong>Capacity:</strong> {branch.specs.capacity}</p>
+                
+                <p className="small-text mb-2"><FaDumbbell className="me-2" /> <strong>Equipment:</strong></p>
+                <ul className="list-unstyled small-text mb-3 ms-4">
+                  {branch.specs.equipment.map((item, idx) => (
+                    <li key={idx} className="mb-1">• {item}</li>
+                  ))}
+                </ul>
+
+                <p className="small-text mb-2"><strong>Facilities:</strong></p>
+                <ul className="list-unstyled small-text mb-0 ms-4">
+                  {branch.specs.facilities.map((item, idx) => (
+                    <li key={idx} className="mb-1">• {item}</li>
+                  ))}
+                </ul>
               </div>
 
               <div className="card-glass p-4">
@@ -200,86 +262,102 @@ function BranchPage() {
               </div>
             </div>
 
-            <div className="col-lg-6" data-aos="fade-left">
-              <div className="card-glass p-4 mb-4">
-                <h5 className="mb-3">Location Map</h5>
-                <div style={{ height: '300px', borderRadius: '12px', overflow: 'hidden' }}>
-                  <iframe
-                    src={branch.mapEmbed}
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title={`${branch.title} Map`}
-                  ></iframe>
-                </div>
-                <a className="btn btn-accent mt-3" href={branch.mapLink} target="_blank" rel="noreferrer">
-                  Open in Google Maps
-                </a>
-              </div>
-
-              <div className="card-glass p-4">
-                <h5 className="mb-3">Membership Plans</h5>
-                <div className="row gy-3">
+            <div className="col-lg-6 d-flex flex-column" data-aos="fade-left">
+              <h2 className="section-title mb-4 d-none d-lg-block" style={{ visibility: 'hidden' }}>Plans</h2>
+              <div className="card-glass p-4 flex-grow-1 d-flex flex-column">
+                <h5 className="mb-4">Membership Plans</h5>
+                <div className="d-flex flex-column gap-3 flex-grow-1">
                   {branch.plans.map((plan) => (
-                    <div className="col-md-4" key={plan.name}>
-                      <div className="plan-card card-glass h-100 p-3">
-                        <h6>{plan.name}</h6>
-                        <p className="plan-price mb-2">{plan.price}</p>
-                        <ul className="list-unstyled small-text">
-                          {plan.features.map((feature, idx) => (
-                            <li key={idx}>• {feature}</li>
-                          ))}
-                        </ul>
-                        <button className="btn btn-accent btn-sm w-100 mt-2" onClick={() => document.getElementById('contact').scrollIntoView()}>
-                          Join Now
-                        </button>
+                    <div className="plan-card card-glass p-3 flex-grow-1 d-flex flex-column" key={plan.name}>
+                      <div className="d-flex justify-content-between align-items-center mb-2">
+                        <h6 className="mb-0">{plan.name}</h6>
+                        <p className="mb-0 text-white fs-4" style={{ fontFamily: 'var(--font-heading)' }}>{plan.price}</p>
                       </div>
+                      <ul className="list-unstyled small-text mb-3 flex-grow-1">
+                        {plan.features.map((feature, idx) => (
+                          <li key={idx}>• {feature}</li>
+                        ))}
+                      </ul>
+                      <button className="btn btn-accent btn-sm w-100 mt-auto" onClick={() => document.getElementById('contact').scrollIntoView()}>
+                        Join Now
+                      </button>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
           </div>
+
+      <div className="row mt-5" data-aos="fade-up">
+        <div className="col-12">
+          <div className="card-glass p-4">
+            <h5 className="mb-3">Location Map</h5>
+            <div style={{ height: '400px', borderRadius: '12px', overflow: 'hidden' }}>
+              <iframe
+                src={branch.mapEmbed}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title={`${branch.title} Map`}
+              ></iframe>
+            </div>
+            <a className="btn btn-accent mt-3" href={branch.mapLink} target="_blank" rel="noreferrer">
+              Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
         </section>
 
         {/* Trainers Section */}
-        <section className="container">
-          <div className="text-center mb-5" data-aos="fade-up">
-            <span className="section-heading">Expert Trainers</span>
-            <h2 className="section-title">Meet Our {branch.title} Team</h2>
-            <p className="section-text">
-              Our certified trainers are dedicated to helping you achieve your fitness goals
-              with personalized training programs and expert guidance.
-            </p>
-          </div>
+        <section 
+          style={{
+            backgroundImage: `linear-gradient(rgba(6, 7, 8, 0.85), rgba(6, 7, 8, 0.95)), url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1920&q=80')`,
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            padding: '100px 0'
+          }}
+        >
+          <div className="container">
+            <div className="text-center mb-5" data-aos="fade-up">
+              <span className="section-heading">Expert Trainers</span>
+              <h2 className="section-title">Meet Our {branch.title} Team</h2>
+              <p className="section-text mx-auto text-center">
+                Our certified trainers are dedicated to helping you achieve your fitness goals
+                with personalized training programs and expert guidance.
+              </p>
+            </div>
 
-          <div className="row gy-4">
-            {branch.trainers.map((trainer, index) => (
-              <div className="col-lg-4 col-md-6" key={trainer.name} data-aos="fade-up" data-aos-delay={index * 100}>
-                <div className="card-glass h-100 p-4 text-center">
-                  <div className="trainer-image mb-3">
-                    <img
-                      src={trainer.image}
-                      alt={trainer.name}
-                      className="rounded-circle"
-                      style={{ width: '120px', height: '120px', objectFit: 'cover' }}
-                    />
+            <div className="row gy-4">
+              {branch.trainers.map((trainer, index) => (
+                <div className="col-lg-4 col-md-6" key={trainer.name} data-aos="fade-up" data-aos-delay={index * 100}>
+                  <div className="card-glass h-100 p-4 text-center">
+                    <div className="trainer-image mb-3">
+                      <img
+                        src={trainer.image}
+                        alt={trainer.name}
+                        className="rounded-circle d-block mx-auto"
+                        style={{ width: '120px', height: '120px', objectFit: 'cover' }}
+                      />
+                    </div>
+                    <h5 className="mb-2">{trainer.name}</h5>
+                    <p className="text-accent mb-2">{trainer.specialty}</p>
+                    <div className="small-text mb-3">
+                      <p><strong>Experience:</strong> {trainer.experience}</p>
+                      <p><strong>Certifications:</strong> {trainer.certifications}</p>
+                    </div>
+                    <button className="btn btn-accent btn-sm" onClick={() => document.getElementById('contact').scrollIntoView()}>
+                      Book Session
+                    </button>
                   </div>
-                  <h5 className="mb-2">{trainer.name}</h5>
-                  <p className="text-accent mb-2">{trainer.specialty}</p>
-                  <div className="small-text mb-3">
-                    <p><strong>Experience:</strong> {trainer.experience}</p>
-                    <p><strong>Certifications:</strong> {trainer.certifications}</p>
-                  </div>
-                  <button className="btn btn-accent btn-sm" onClick={() => document.getElementById('contact').scrollIntoView()}>
-                    Book Session
-                  </button>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
@@ -296,7 +374,6 @@ function BranchPage() {
         </section>
       </main>
       <Footer />
-      <FloatingActions />
     </div>
   )
 }

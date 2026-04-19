@@ -33,7 +33,8 @@ function About() {
             <img
               src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80"
               alt="Gym workout"
-              className="img-fluid"
+              className="img-fluid w-100"
+              style={{ objectFit: 'cover', height: '100%', minHeight: '400px' }}
             />
           </div>
         </div>

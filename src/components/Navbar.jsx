@@ -1,16 +1,38 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
 
   const isHomePage = location.pathname === '/'
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+    <nav 
+      className={`navbar navbar-expand-lg navbar-dark navbar-custom fixed-top ${isScrolled ? 'scrolled' : ''}`}
+      style={{
+        transition: 'all 0.3s ease-in-out',
+        backgroundColor: isScrolled || menuOpen ? 'rgba(6, 7, 8, 0.95)' : 'transparent',
+        backdropFilter: isScrolled || menuOpen ? 'blur(10px)' : 'none',
+        boxShadow: isScrolled ? '0 4px 30px rgba(0, 0, 0, 0.5)' : 'none',
+        padding: isScrolled ? '12px 0' : '22px 0'
+      }}
+    >
       <div className="container">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/" onClick={() => window.scrollTo(0, 0)}>
           MK FITNESS
         </Link>
         <button

@@ -1,6 +1,7 @@
 import { FaMapMarkerAlt, FaPhoneAlt, FaClock, FaMap } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
-function BranchCard({ title, address, phone, timings, mapLink, highlight }) {
+function BranchCard({ id, title, address, phone, timings, mapLink, highlight }) {
   return (
     <article className={`branch-card card-glass h-100 position-relative ${highlight ? 'popular' : ''}`} data-aos="fade-up">
       <div className="branch-body">
@@ -26,9 +27,9 @@ function BranchCard({ title, address, phone, timings, mapLink, highlight }) {
           <a className="btn btn-accent btn-sm" href={mapLink} target="_blank" rel="noreferrer">
             <FaMap className="me-2" /> View on Map
           </a>
-          <a className="btn btn-outline-accent btn-sm" href="#contact">
+          <Link className="btn btn-outline-accent btn-sm" to={`/branch/${id}#contact`}>
             Visit Now
-          </a>
+          </Link>
         </div>
       </div>
     </article>

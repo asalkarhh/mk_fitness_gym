@@ -40,7 +40,7 @@ function Plans() {
               <div className="plan-header">
                 <div>
                   <span className="badge badge-soft mb-2">{plan.name}</span>
-                  <h3 className="plan-price">{plan.price}</h3>
+                  <h3 className="plan-price text-white">{plan.price}</h3>
                 </div>
                 {plan.highlight && <span className="badge bg-success">Most Popular</span>}
               </div>

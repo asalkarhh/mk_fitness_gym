@@ -1,7 +1,7 @@
 const gallery = [
   {
     title: 'Full Body Strength',
-    image: 'https://images.unsplash.com/photo-1583454110551-21f0e0b968cf?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80',
   },
   {
     title: 'Lean Cardio',
@@ -9,7 +9,7 @@ const gallery = [
   },
   {
     title: 'Athlete Training',
-    image: 'https://images.unsplash.com/photo-1594737625785-40e59764b6ee?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80',
   },
   {
     title: 'Functional Fitness',
@@ -17,11 +17,11 @@ const gallery = [
   },
   {
     title: 'Strength Transformation',
-    image: 'https://images.unsplash.com/photo-1508873699372-7ae51b0b7b2a?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=80',
   },
   {
     title: 'Power Sessions',
-    image: 'https://images.unsplash.com/photo-1546484959-f4f151daa5fa?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=900&q=80',
   },
 ]
 

@@ -57,7 +57,7 @@ function Hero() {
       <div className="container hero-content" data-aos="fade-up">
         <span className="section-heading">Premium Fitness Brand</span>
         <h1 className="hero-title">
-          Transform Your Body at <span className="text-gradient">MK Fitness Gym</span>
+          Transform Your Body at <span className="text-gradient"><br></br>MK Fitness Gym</span>
         </h1>
         <p className="hero-copy">
           Marunji &amp; Punawale शाखा उपलब्ध - join a motivated community with
@@ -75,7 +75,7 @@ function Hero() {
           <a className="btn btn-accent" href="#contact">
             Get Started <FaArrowRight className="ms-2" />
           </a>
-          <a className="btn btn-outline-accent" href="#plans">
+          <a className="btn btn-outline-accent" href="#branches">
             See Memberships
           </a>
         </div>

@@ -1,10 +1,14 @@
 function ContactForm({ branch }) {
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Here you would implement the actual form submission logic
-    // For now, just show an alert
+    
+    const name = document.getElementById('name').value
+    const phone = document.getElementById('phone').value
+    const selectedBranch = branch ? branch.title : document.getElementById('branch').value
+    const extraInfo = branch ? `Plan: ${document.getElementById('plan').value}` : `Query: ${document.getElementById('query').value}`
+
     const recipient = branch ? branch.manager.email : 'owner@mkfitness.com'
-    alert(`Form submitted! Data would be sent to: ${recipient}`)
+    alert(`Form Submitted Successfully!\n\nName: ${name}\nPhone: ${phone}\nBranch: ${selectedBranch}\n${extraInfo}\n\nData has been sent to branch manager: ${recipient}`)
   }
 
   return (
@@ -57,6 +61,26 @@ function ContactForm({ branch }) {
                 </select>
               </div>
             )}
+          {branch ? (
+            <div className="mb-4">
+              <label className="form-label" htmlFor="plan">
+                Interested Plan
+              </label>
+              <select className="form-select" id="plan" required>
+                <option value="">Select a plan</option>
+                {branch.plans.map(p => (
+                  <option key={p.name} value={p.name}>{p.name} - {p.price}</option>
+                ))}
+              </select>
+            </div>
+          ) : (
+            <div className="mb-4">
+              <label className="form-label" htmlFor="query">
+                Any Query
+              </label>
+              <textarea className="form-control" id="query" rows="3" placeholder="Tell us how we can help you" required></textarea>
+            </div>
+          )}
             <button className="btn btn-accent w-100" type="submit">
               Get Free Consultation
             </button>

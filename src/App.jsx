@@ -9,13 +9,11 @@ import Branches from './components/Branches.jsx'
 import Services from './components/Services.jsx'
 import Plans from './components/Plans.jsx'
 import FranchisePage from './components/FranchisePage.jsx'
-import BranchLocations from './components/BranchLocations.jsx'
 import Transformations from './components/Transformations.jsx'
 import Trainers from './components/Trainers.jsx'
 import Testimonials from './components/Testimonials.jsx'
 import ContactForm from './components/ContactForm.jsx'
 import Footer from './components/Footer.jsx'
-import FloatingActions from './components/FloatingActions.jsx'
 import Loader from './components/Loader.jsx'
 import BranchPage from './components/BranchPage.jsx'
 
@@ -27,7 +25,6 @@ function HomePage() {
         <Hero />
         <About />
         <Branches />
-        <BranchLocations />
         <Services />
         <Transformations />
         <Trainers />
@@ -35,7 +32,6 @@ function HomePage() {
         <ContactForm />
       </main>
       <Footer />
-      <FloatingActions />
     </div>
   )
 }

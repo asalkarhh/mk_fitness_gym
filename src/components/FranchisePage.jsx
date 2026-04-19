@@ -75,9 +75,11 @@ function FranchisePage() {
           backgroundImage: `linear-gradient(135deg, rgba(6, 7, 8, 0.9), rgba(6, 7, 8, 0.85)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80')`
         }}>
           <div className="container hero-content">
-            <Link to="/" className="btn btn-outline-accent mb-4">
-              <FaArrowLeft className="me-2" /> Back to Home
-            </Link>
+            <div className="mb-5">
+              <Link to="/" className="btn btn-outline-accent">
+                <FaArrowLeft className="me-2" /> Back to Home
+              </Link>
+            </div>
             <span className="section-heading">Franchise Opportunity</span>
             <h1 className="hero-title">Join MK Fitness Family</h1>
             <p className="hero-copy">

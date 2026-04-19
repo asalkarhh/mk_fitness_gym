@@ -26,33 +26,45 @@ function Testimonials() {
   const handleNext = () => setCurrent((prev) => (prev + 1) % testimonials.length)
 
   return (
-    <section id="testimonials" className="container">
-      <div className="text-center mb-5" data-aos="fade-up">
-        <span className="section-heading">Testimonials</span>
-        <h2 className="section-title">What Our Members Say</h2>
-        <p className="section-text mx-auto">
-          Hear from members who achieved strength, confidence, and an energised lifestyle.
-        </p>
-      </div>
+    <section 
+      id="testimonials" 
+      style={{
+        backgroundImage: `linear-gradient(rgba(6, 7, 8, 0.85), rgba(6, 7, 8, 0.95)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80')`,
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        padding: '100px 0'
+      }}
+    >
+      <div className="container">
+        <div className="text-center mb-5" data-aos="fade-up">
+          <span className="section-heading">Testimonials</span>
+          <h2 className="section-title">What Our Members Say</h2>
+          <p className="section-text mx-auto text-center">
+            Hear from members who achieved strength, confidence, and an energised lifestyle.
+          </p>
+        </div>
 
-      <div className="position-relative" data-aos="fade-up" data-aos-delay="100">
-        <article className="testimonial-card card-glass mx-auto p-5" style={{ maxWidth: 760 }}>
-          <div className="star-rating mb-3">
-            {Array.from({ length: testimonials[current].rating }).map((_, idx) => (
-              <FaStar key={idx} />
-            ))}
+        <div className="position-relative" data-aos="fade-up" data-aos-delay="100">
+          <article className="testimonial-card card-glass mx-auto p-5 text-center" style={{ maxWidth: 760 }}>
+            <div className="star-rating mb-3">
+              {Array.from({ length: testimonials[current].rating }).map((_, idx) => (
+                <FaStar key={idx} />
+              ))}
+            </div>
+            <p className="section-text mb-4 mx-auto text-white">“{testimonials[current].message}”</p>
+            <strong className="text-white">{testimonials[current].name}</strong>
+          </article>
+
+          <div className="d-flex justify-content-center gap-3 mt-4">
+            <button className="btn btn-outline-accent" onClick={handlePrev}>
+              <FaChevronLeft />
+            </button>
+            <button className="btn btn-accent" onClick={handleNext}>
+              <FaChevronRight />
+            </button>
           </div>
-          <p className="section-text mb-4">“{testimonials[current].message}”</p>
-          <strong>{testimonials[current].name}</strong>
-        </article>
-
-        <div className="d-flex justify-content-center gap-3 mt-4">
-          <button className="btn btn-outline-accent" onClick={handlePrev}>
-            <FaChevronLeft />
-          </button>
-          <button className="btn btn-accent" onClick={handleNext}>
-            <FaChevronRight />
-          </button>
         </div>
       </div>
     </section>

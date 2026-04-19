@@ -60,9 +60,9 @@ function Branches() {
                   <Link className="btn btn-accent btn-sm" to={`/branch/${branch.id}`}>
                     <FaMap className="me-2" /> View Details
                   </Link>
-                  <a className="btn btn-outline-accent btn-sm" href="#contact">
+                  <Link className="btn btn-outline-accent btn-sm" to={`/branch/${branch.id}#contact`}>
                     Visit Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </article>
