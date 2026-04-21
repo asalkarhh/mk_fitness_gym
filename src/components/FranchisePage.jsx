@@ -39,7 +39,7 @@ function FranchisePage() {
     'Suitable commercial space (2000+ sq ft)',
     'Passion for fitness and entrepreneurship',
     'Basic business management experience preferred',
-    'Commitment to MK Fitness standards and values'
+    'Commitment to M.K. Fitness standards and values'
   ]
 
   const process = [
@@ -81,7 +81,7 @@ function FranchisePage() {
               </Link>
             </div>
             <span className="section-heading">Franchise Opportunity</span>
-            <h1 className="hero-title">Join MK Fitness Family</h1>
+            <h1 className="hero-title">Join M.K. Fitness Family</h1>
             <p className="hero-copy">
               Be part of India's growing fitness revolution. Own a premium gym brand
               with proven success, comprehensive support, and unlimited growth potential.
@@ -98,7 +98,7 @@ function FranchisePage() {
         {/* Benefits Section */}
         <section className="container py-5">
           <div className="text-center mb-5" data-aos="fade-up">
-            <h2 className="section-title">Why Choose MK Fitness Franchise?</h2>
+            <h2 className="section-title">Why Choose M.K. Fitness Franchise?</h2>
             <p className="section-text">
               Join a winning team with comprehensive support, proven systems, and unlimited potential
             </p>
@@ -124,7 +124,7 @@ function FranchisePage() {
           <div className="text-center mb-5" data-aos="fade-up">
             <h2 className="section-title">Franchise Process</h2>
             <p className="section-text">
-              Simple 4-step process to become a MK Fitness franchise owner
+              Simple 4-step process to become a M.K. Fitness franchise owner
             </p>
           </div>
 
@@ -201,7 +201,7 @@ function FranchisePage() {
             <div className="col-lg-6" data-aos="fade-right">
               <h2 className="section-title">Start Your Journey</h2>
               <p className="section-text mb-4">
-                Ready to become a MK Fitness franchise owner? Fill out the form below
+                Ready to become a M.K. Fitness franchise owner? Fill out the form below
                 and our franchise team will contact you within 24 hours.
               </p>
 
@@ -290,7 +290,7 @@ function FranchisePage() {
                     className="form-control"
                     id="franchise-message"
                     rows="3"
-                    placeholder="Why do you want to own a MK Fitness franchise? Any relevant experience?"
+                    placeholder="Why do you want to own a M.K. Fitness franchise? Any relevant experience?"
                   ></textarea>
                 </div>
                 <button className="btn btn-accent w-100" type="submit">
@@ -306,7 +306,7 @@ function FranchisePage() {
           <div className="text-center mb-5" data-aos="fade-up">
             <h2 className="section-title">Our Success Story</h2>
             <p className="section-text">
-              Visit our flagship branches to see the MK Fitness experience firsthand
+              Visit our flagship branches to see the M.K. Fitness experience firsthand
             </p>
           </div>
 
@@ -317,10 +317,10 @@ function FranchisePage() {
                   <FaMapMarkerAlt className="me-2 text-accent" />
                   Marunji Flagship Branch
                 </h5>
-                <p className="small-text mb-3">Plot 12, Near Marunji Phata, Pune, Maharashtra</p>
+                <p className="small-text mb-3">Front of motherson Sony Company, Hinjawadi - Kasarsai Rd, Marunji, Pune</p>
                 <div style={{ height: '250px', borderRadius: '12px', overflow: 'hidden' }}>
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.123456789012!2d73.789012!3d18.567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1234567890%3A0x123456789abcdef!2sMarunji%20Phata!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.891176195611!2d73.7080015752021!3d18.61408278252254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbce5b367cdb%3A0xa70a1e8f6a8a9c00!2sM%20K%20Fitness%20Club!5e0!3m2!1sen!2sin!4v1716981156681!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -330,7 +330,7 @@ function FranchisePage() {
                     title="Marunji Branch Map"
                   ></iframe>
                 </div>
-                <a className="btn btn-accent mt-3 w-100" href="https://goo.gl/maps/8G9z7vakzvH2" target="_blank" rel="noreferrer">
+                <a className="btn btn-accent mt-3 w-100" href="https://www.google.com/maps/place/M+K+Fitness+Club/@18.6164811,73.7084411,2449m/data=!3m1!1e3!4m6!3m5!1s0x3bc2bbce5b367cdb:0xa70a1e8f6a8a9c00!8m2!3d18.6140779!4d73.7105712!16s%2Fg%2F11fqpwmwvz?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">
                   Get Directions
                 </a>
               </div>
@@ -342,10 +342,10 @@ function FranchisePage() {
                   <FaMapMarkerAlt className="me-2 text-accent" />
                   Punawale Branch
                 </h5>
-                <p className="small-text mb-3">Shop 6, Punawale Market, Pune, Maharashtra</p>
+                <p className="small-text mb-3">Near lotus business school, Kate Wasti, Punawale, Pune</p>
                 <div style={{ height: '250px', borderRadius: '12px', overflow: 'hidden' }}>
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.987654321098!2d73.876543!3d18.654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c9876543210%3A0xfedcba987654321!2sPunawale%20Market!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1!2d73.7388403!3d18.6327957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb4be5c319d3%3A0x1cedf9a8c851bdee!2sM.K%20fitness%20club%2C%20punawale!5e0!3m2!1sen!2sin!4v1716981156681!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -355,7 +355,7 @@ function FranchisePage() {
                     title="Punawale Branch Map"
                   ></iframe>
                 </div>
-                <a className="btn btn-accent mt-3 w-100" href="https://goo.gl/maps/7uyK3J4vcY32" target="_blank" rel="noreferrer">
+                <a className="btn btn-accent mt-3 w-100" href="https://www.google.com/maps/place/M.K+fitness+club,+punawale/@18.6327957,73.7362654,728m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bc2bb4be5c319d3:0x1cedf9a8c851bdee!8m2!3d18.6327957!4d73.7388403!16s%2Fg%2F11rck3pkg5?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">
                   Get Directions
                 </a>
               </div>

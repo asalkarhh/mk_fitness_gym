@@ -1,4 +1,4 @@
-# MK Fitness Gym Website
+# M. K. Fitness Club Website
 
 ## Setup Instructions
 

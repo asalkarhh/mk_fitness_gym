@@ -6,7 +6,7 @@ function Footer() {
       <div className="container">
         <div className="row gy-4">
           <div className="col-md-4" data-aos="fade-right">
-            <h5>MK Fitness Gym</h5>
+            <h5>M.K. Fitness Club</h5>
             <p className="small-text">
               Premium fitness destinations in Marunji and Punawale with high-performance
               training, community support, and measurable results.
@@ -14,8 +14,8 @@ function Footer() {
           </div>
           <div className="col-md-4" data-aos="fade-up">
             <h6>Branch Addresses</h6>
-            <p className="small-text mb-2">Marunji Branch: Plot 12, Near Marunji Phata, Pune</p>
-            <p className="small-text">Punawale Branch: Shop 6, Punawale Market, Pune</p>
+            <p className="small-text mb-2">Marunji Branch: Front of motherson Sony Company, Marunji, Pune</p>
+            <p className="small-text">Punawale Branch: Near lotus business school, Kate Wasti, Punawale, Pune</p>
           </div>
           <div className="col-md-4" data-aos="fade-left">
             <h6>Connect with Us</h6>
@@ -34,7 +34,7 @@ function Footer() {
         </div>
 
         <div className="text-center mt-5 small-text">
-          © 2026 MK Fitness Gym. All rights reserved.
+          © 2026 M.K. Fitness Club. All rights reserved.
         </div>
       </div>
     </footer>

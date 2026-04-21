@@ -4,7 +4,7 @@ import { FaChevronLeft, FaChevronRight, FaStar } from 'react-icons/fa'
 const testimonials = [
   {
     name: 'Aditi Sharma',
-    message: 'MK Fitness changed my routine. The trainers push me in the right way and the results are real.',
+    message: 'M.K. Fitness changed my routine. The trainers push me in the right way and the results are real.',
     rating: 5,
   },
   {

@@ -12,7 +12,7 @@ function FloatingActions() {
       >
         <FaWhatsapp size={20} />
       </a>
-      <a className="call-action" href="tel:+919876543210" title="Call MK Fitness">
+      <a className="call-action" href="tel:+919876543210" title="Call M.K. Fitness Club">
         <FaPhoneAlt size={18} />
       </a>
     </div>

@@ -10,7 +10,7 @@ function BranchCard({ id, title, address, phone, timings, mapLink, highlight }) 
             <h5 className="mb-1">{title}</h5>
             <span className="badge badge-soft">Open Now</span>
           </div>
-          <span className="text-muted small-text">Mon - Sun</span>
+          <span className="badge badge-soft">Mon - Sun</span>
         </div>
 
         <p className="small-text mb-3">

@@ -32,7 +32,7 @@ function Transformations() {
         <span className="section-heading">Transformations</span>
         <h2 className="section-title">Real Client Progress &amp; Gym Energy</h2>
         <p className="section-text mx-auto">
-          Explore our gallery of before/after results and training moments that prove the MK Fitness difference.
+          Explore our gallery of before/after results and training moments that prove the M.K. Fitness difference.
         </p>
       </div>
 

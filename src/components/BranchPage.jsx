@@ -9,11 +9,11 @@ const branches = [
   {
     id: 'marunji',
     title: 'Marunji Branch',
-    address: 'Plot 12, Near Marunji Phata, Pune, Maharashtra',
+    address: 'Front of motherson Sony Company, Hinjawadi - Kasarsai Rd, Marunji Village, Hinjawadi, Marunji, Pune, Maharashtra 411057',
     phone: '+91 98765 43210',
-    timings: '5AM - 11PM',
-    mapLink: 'https://goo.gl/maps/8G9z7vakzvH2',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.123456789012!2d73.789012!3d18.567890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1234567890%3A0x123456789abcdef!2sMarunji%20Phata!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin',
+    timings: 'Mon-Sat: 5 am - 11 pm, Sun: 5 pm - 9 pm',
+    mapLink: 'https://www.google.com/maps/place/M+K+Fitness+Club/@18.6164811,73.7084411,2449m/data=!3m1!1e3!4m6!3m5!1s0x3bc2bbce5b367cdb:0xa70a1e8f6a8a9c00!8m2!3d18.6140779!4d73.7105712!16s%2Fg%2F11fqpwmwvz?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.891176195611!2d73.7080015752021!3d18.61408278252254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbce5b367cdb%3A0xa70a1e8f6a8a9c00!2sM%20K%20Fitness%20Club!5e0!3m2!1sen!2sin!4v1716981156681!5m2!1sen!2sin',
     manager: {
       name: 'Rajesh Kumar',
       phone: '+91 98765 43211',
@@ -73,11 +73,11 @@ const branches = [
   {
     id: 'punawale',
     title: 'Punawale Branch',
-    address: 'Shop 6, Punawale Market, Pune, Maharashtra',
+    address: 'Near Mumbai-pune Highway, Jambe Rd, near lotus business school, Kate Wasti, Punawale, Pune, Maharashtra 411033',
     phone: '+91 91234 56789',
-    timings: '5AM - 11PM',
-    mapLink: 'https://goo.gl/maps/7uyK3J4vcY32',
-    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.987654321098!2d73.876543!3d18.654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c9876543210%3A0xfedcba987654321!2sPunawale%20Market!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin',
+    timings: 'Mon-Sat: 5 am - 11 pm, Sun: 5 pm - 9 pm',
+    mapLink: 'https://www.google.com/maps/place/M.K+fitness+club,+punawale/@18.6327957,73.7362654,728m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bc2bb4be5c319d3:0x1cedf9a8c851bdee!8m2!3d18.6327957!4d73.7388403!16s%2Fg%2F11rck3pkg5?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D',
+    mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1!2d73.7388403!3d18.6327957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb4be5c319d3%3A0x1cedf9a8c851bdee!2sM.K%20fitness%20club%2C%20punawale!5e0!3m2!1sen!2sin!4v1716981156681!5m2!1sen!2sin',
     manager: {
       name: 'Priya Sharma',
       phone: '+91 91234 56790',
@@ -304,9 +304,11 @@ function BranchPage() {
                 title={`${branch.title} Map`}
               ></iframe>
             </div>
-            <a className="btn btn-accent mt-3" href={branch.mapLink} target="_blank" rel="noreferrer">
-              Open in Google Maps
-            </a>
+            <div className="text-center mt-4">
+              <a className="btn btn-accent px-5" href={branch.mapLink} target="_blank" rel="noreferrer">
+                Open in Google Maps
+              </a>
+            </div>
           </div>
         </div>
       </div>

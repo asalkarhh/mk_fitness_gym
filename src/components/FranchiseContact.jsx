@@ -10,9 +10,9 @@ function FranchiseContact() {
       <div className="row align-items-center gy-5">
         <div className="col-lg-6" data-aos="fade-right">
           <span className="section-heading">Franchise Opportunity</span>
-          <h2 className="section-title">Join MK Fitness Family</h2>
+          <h2 className="section-title">Join M.K. Fitness Family</h2>
           <p className="section-text">
-            Interested in opening your own MK Fitness Gym? We offer comprehensive
+            Interested in opening your own M.K. Fitness Club? We offer comprehensive
             franchise support including location selection, equipment setup,
             marketing assistance, and ongoing operational guidance.
           </p>
@@ -84,7 +84,7 @@ function FranchiseContact() {
                 className="form-control"
                 id="franchise-message"
                 rows="3"
-                placeholder="Tell us about your background and why you're interested in MK Fitness franchise"
+                placeholder="Tell us about your background and why you're interested in M.K. Fitness franchise"
               ></textarea>
             </div>
             <button className="btn btn-accent w-100" type="submit">

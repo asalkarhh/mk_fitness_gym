@@ -33,7 +33,7 @@ function Navbar() {
     >
       <div className="container">
         <Link className="navbar-brand" to="/" onClick={() => window.scrollTo(0, 0)}>
-          MK FITNESS
+          M.K. FITNESS
         </Link>
         <button
           className="navbar-toggler"

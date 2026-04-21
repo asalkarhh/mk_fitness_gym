@@ -3,10 +3,10 @@ function About() {
     <section id="about" className="container">
       <div className="row align-items-center gy-5">
         <div className="col-lg-6" data-aos="fade-right">
-          <div className="section-heading">About MK Fitness</div>
+          <div className="section-heading">About M.K. Fitness Club</div>
           <h2 className="section-title">Fuel Your Fitness Journey with Discipline &amp; Energy</h2>
           <p className="section-text">
-            MK Fitness Gym is a premium gym experience built for hustlers from Marunji
+            M. K. Fitness Club is a premium gym experience built for hustlers from Marunji
             and Punawale. आम्ही तुमची ट्रान्सफॉर्मेशन मिशनमध्ये सोबत आहोत.
             Our trainers combine science-backed workouts, personalized nutrition
             guidance, and local trust to help you achieve fast, healthy results.
