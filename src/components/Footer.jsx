@@ -1,4 +1,5 @@
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import logo from '../assets/mkfitness.png'
 
 function Footer() {
   return (
@@ -6,7 +7,10 @@ function Footer() {
       <div className="container">
         <div className="row gy-4">
           <div className="col-md-4" data-aos="fade-right">
-            <h5>M.K. Fitness Club</h5>
+            <div className="d-flex align-items-center mb-3">
+              <img src={logo} alt="M.K. Fitness" height="40" className="me-2" />
+              <h5 className="mb-0">M.K. Fitness Club</h5>
+            </div>
             <p className="small-text">
               Premium fitness destinations in Marunji and Punawale with high-performance
               training, community support, and measurable results.
