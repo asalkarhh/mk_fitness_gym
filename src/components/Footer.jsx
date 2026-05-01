@@ -1,3 +1,5 @@
+// Triggering a new deployment commit
+
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import logo from '../assets/mkfitness.png'
 
