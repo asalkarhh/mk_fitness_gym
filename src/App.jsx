@@ -26,6 +26,7 @@ function HomePage() {
         <About />
         <Branches />
         <Services />
+        <Plans />
         <Transformations />
         <Trainers />
         <Testimonials />

@@ -364,7 +364,7 @@ function BranchPage() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="container">
+        <section className="container">
           <div className="text-center mb-5" data-aos="fade-up">
             <span className="section-heading">Get in Touch</span>
             <h2 className="section-title">Contact {branch.title}</h2>

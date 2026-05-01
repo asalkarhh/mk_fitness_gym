@@ -24,13 +24,13 @@ function Footer() {
           <div className="col-md-4" data-aos="fade-left">
             <h6>Connect with Us</h6>
             <div className="d-flex gap-3 mt-3">
-              <a className="social-link" href="#" aria-label="Facebook">
+              <a className="social-link" href="https://www.facebook.com/mkfitness" target="_blank" rel="noreferrer" aria-label="Facebook">
                 <FaFacebookF />
               </a>
-              <a className="social-link" href="#" aria-label="Instagram">
+              <a className="social-link" href="https://www.instagram.com/mkfitness" target="_blank" rel="noreferrer" aria-label="Instagram">
                 <FaInstagram />
               </a>
-              <a className="social-link" href="#" aria-label="Whatsapp">
+              <a className="social-link" href="https://wa.me/919876543210" target="_blank" rel="noreferrer" aria-label="Whatsapp">
                 <FaWhatsapp />
               </a>
             </div>

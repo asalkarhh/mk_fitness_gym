@@ -8,7 +8,6 @@ function Hero() {
   const [cursor, setCursor] = useState(true)
 
   useEffect(() => {
-    let active = true
     let phraseIndex = 0
     let charIndex = 0
     let deleting = false
@@ -46,7 +45,6 @@ function Hero() {
     const cursorTimer = setInterval(() => setCursor((state) => !state), 500)
 
     return () => {
-      active = false
       clearTimeout(typingTimer)
       clearInterval(cursorTimer)
     }
@@ -75,7 +73,7 @@ function Hero() {
           <a className="btn btn-accent" href="#contact">
             Get Started <FaArrowRight className="ms-2" />
           </a>
-          <a className="btn btn-outline-accent" href="#branches">
+          <a className="btn btn-outline-accent" href="#plans">
             See Memberships
           </a>
         </div>
