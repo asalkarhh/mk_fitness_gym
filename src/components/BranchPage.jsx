@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useParams, Link, useLocation } from 'react-router-dom'
-import { FaArrowLeft, FaMapMarkerAlt, FaPhoneAlt, FaClock, FaUser, FaDumbbell, FaRulerCombined, FaCamera, FaWhatsapp } from 'react-icons/fa'
+import { FaArrowLeft, FaMapMarkerAlt, FaPhoneAlt, FaClock, FaUser, FaDumbbell, FaRulerCombined, FaCamera, FaWhatsapp, FaInstagram } from 'react-icons/fa'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
 import ContactForm from './ContactForm.jsx'
@@ -10,17 +10,18 @@ const branches = [
     id: 'marunji',
     title: 'Marunji Branch',
     address: 'Front of motherson Sony Company, Hinjawadi - Kasarsai Rd, Marunji Village, Hinjawadi, Marunji, Pune, Maharashtra 411057',
-    phone: '+91 98765 43210',
+    phone: '+91 96891 67644',
+    instagram: 'https://www.instagram.com/mkfitness_marunji_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
     timings: 'Mon-Sat: 5 am - 11 pm, Sun: 5 pm - 9 pm',
     mapLink: 'https://www.google.com/maps/place/M+K+Fitness+Club/@18.6164811,73.7084411,2449m/data=!3m1!1e3!4m6!3m5!1s0x3bc2bbce5b367cdb:0xa70a1e8f6a8a9c00!8m2!3d18.6140779!4d73.7105712!16s%2Fg%2F11fqpwmwvz?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D',
     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.891176195611!2d73.7080015752021!3d18.61408278252254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbce5b367cdb%3A0xa70a1e8f6a8a9c00!2sM%20K%20Fitness%20Club!5e0!3m2!1sen!2sin!4v1716981156681!5m2!1sen!2sin',
     manager: {
-      name: 'Rajesh Kumar',
-      phone: '+91 98765 43211',
-      email: 'rajesh@mkfitness.com'
+      name: 'Akshay',
+      phone: '+91 96891 67644',
+      email: 'marunji.mkfitnessclub@gmail.com'
     },
     specs: {
-      area: '2500 sq ft',
+      area: '10000 sq ft',
       equipment: [
         'Olympic weight sets',
         'Advanced cardio machines',
@@ -36,9 +37,9 @@ const branches = [
       capacity: '50 members per session'
     },
     plans: [
-      { name: 'Basic', price: '₹1499/mo', features: ['Gym access', 'Free orientation', 'Group classes'] },
-      { name: 'Standard', price: '₹2499/mo', features: ['All Basic', 'Personal training', 'Nutrition guide'] },
-      { name: 'Premium', price: '₹3999/mo', features: ['All Standard', 'Unlimited classes', 'VIP support'] }
+      { name: 'Monthly', price: '₹2499', features: ['Gym', 'Cardio Groups', 'Batches', 'BMI Workouts and Diet Plan', 'Floor Training Guidance', 'Locker and Steam'] },
+      { name: 'Quarterly', price: '₹4999', features: ['Gym', 'Cardio Groups', 'Batches', 'BMI Workouts and Diet Plan', 'Floor Training Guidance', 'Locker and Steam'] },
+      { name: 'Yearly', price: '₹9999', features: ['Gym', 'Cardio Groups', 'Batches', 'BMI Workouts and Diet Plan', 'Floor Training Guidance', 'Locker and Steam'] }
     ],
     images: [
       'https://images.unsplash.com/photo-1583416750470-965b2707b355?auto=format&fit=crop&w=900&q=80', // Steam Bath
@@ -48,25 +49,25 @@ const branches = [
     ],
     trainers: [
       {
-        name: 'Amit Singh',
-        specialty: 'Strength & Conditioning',
-        experience: '8 years',
-        certifications: 'NASM-CPT, CrossFit L2',
-        image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80'
+        name: 'Akshay sir',
+        specialty: 'Weight Management & Weight Loss Expert With Special Case',
+        experience: '10 years',
+        // certifications: 'NASM-CPT, CrossFit L2',
+        // image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80'
       },
       {
-        name: 'Kavita Patel',
-        specialty: 'Yoga & Flexibility',
-        experience: '6 years',
-        certifications: 'RYT-500, Pilates Certified',
-        image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80'
+        name: 'Aniket Sir',
+        specialty: 'Weight Loss & Weight Management ',
+        experience: '10 years',
+        // certifications: 'RYT-500, Pilates Certified',
+        // image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80'
       },
       {
-        name: 'Rahul Mehta',
-        specialty: 'Weight Loss & Nutrition',
-        experience: '5 years',
-        certifications: 'Precision Nutrition, ISSA',
-        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80'
+        name: 'Abhi Sir',
+        specialty: ' Weight Management & Body Building Prep Coach.',
+        experience: '3 years',
+        // certifications: 'Precision Nutrition, ISSA',
+        // image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80'
       }
     ]
   },
@@ -74,17 +75,18 @@ const branches = [
     id: 'punawale',
     title: 'Punawale Branch',
     address: 'Near Mumbai-pune Highway, Jambe Rd, near lotus business school, Kate Wasti, Punawale, Pune, Maharashtra 411033',
-    phone: '+91 91234 56789',
+    phone: '+91 86989 67644',
+    instagram: 'https://www.instagram.com/mkfitnessclub_punawale?igsh=dTljbzdzdzFpa2hn',
     timings: 'Mon-Sat: 5 am - 11 pm, Sun: 5 pm - 9 pm',
     mapLink: 'https://www.google.com/maps/place/M.K+fitness+club,+punawale/@18.6327957,73.7362654,728m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bc2bb4be5c319d3:0x1cedf9a8c851bdee!8m2!3d18.6327957!4d73.7388403!16s%2Fg%2F11rck3pkg5?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D',
     mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1!2d73.7388403!3d18.6327957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb4be5c319d3%3A0x1cedf9a8c851bdee!2sM.K%20fitness%20club%2C%20punawale!5e0!3m2!1sen!2sin!4v1716981156681!5m2!1sen!2sin',
     manager: {
-      name: 'Priya Sharma',
-      phone: '+91 91234 56790',
-      email: 'priya@mkfitness.com'
+      name: 'Shashank Singh',
+      phone: '+91 86989 67644',
+      email: 'punawalemkfitness@gmail.com'
     },
     specs: {
-      area: '2200 sq ft',
+      area: '8000 sq ft',
       equipment: [
         'Free weights & Dumbbells',
         'Treadmills & Rowers',
@@ -95,14 +97,19 @@ const branches = [
         'Clean changing rooms',
         'Reserved parking area',
         'Healthy Cafe zone',
-        'Recovery & Massage zone'
+        'Recovery & Massage zone',
+        'Gym',
+        'Cardio',
+        'Group Batches',
+        'Steam'
       ],
-      capacity: '45 members per session'
+      capacity: '60 members per session'
     },
     plans: [
-      { name: 'Basic', price: '₹1499/mo', features: ['Gym access', 'Free orientation', 'Group classes'] },
-      { name: 'Standard', price: '₹2499/mo', features: ['All Basic', 'Personal training', 'Nutrition guide'] },
-      { name: 'Premium', price: '₹3999/mo', features: ['All Standard', 'Unlimited classes', 'VIP support'] }
+      { name: 'Monthly', price: '₹2499', features: ['Gym', 'Cardio Groups', 'Batches', 'BMI Workouts and Diet Plan', 'Floor Training Guidance', 'Locker and Steam'] },
+      { name: 'Quarterly', price: '₹4999', features: ['Gym', 'Cardio Groups', 'Batches', 'BMI Workouts and Diet Plan', 'Floor Training Guidance', 'Locker and Steam'] },
+      { name: 'Half Yearly', price: '7999', features: ['Gym', 'Cardio Groups', 'Batches', 'BMI Workouts and Diet Plan', 'Floor Training Guidance', 'Locker and Steam'] },
+      { name: 'Yearly', price: '₹9999', features: ['Gym', 'Cardio Groups', 'Batches', 'BMI Workouts and Diet Plan', 'Floor Training Guidance', 'Locker and Steam'] }
     ],
     images: [
       'https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=900&q=80', // Free Weights
@@ -112,25 +119,9 @@ const branches = [
     ],
     trainers: [
       {
-        name: 'Vikram Joshi',
-        specialty: 'Bodybuilding & Powerlifting',
-        experience: '10 years',
-        certifications: 'IFBB Pro, USAPL',
-        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80'
-      },
-      {
-        name: 'Sneha Gupta',
-        specialty: 'HIIT & Cardio',
+        name: 'Mayur Shivalkar',
+        specialty: 'Strength Training/Yoga',
         experience: '7 years',
-        certifications: 'ACSM, HIIT Specialist',
-        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80'
-      },
-      {
-        name: 'Arjun Reddy',
-        specialty: 'Sports Performance',
-        experience: '9 years',
-        certifications: 'CSCS, FMS',
-        image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80'
       }
     ]
   }
@@ -227,10 +218,19 @@ function BranchPage() {
                 </a>
                 <a
                   href={`tel:${branch.manager.phone.replace(/\D/g, '')}`}
-                  className="btn btn-sm w-100 text-white rounded-pill"
+                  className="btn btn-sm w-100 mb-2 text-white rounded-pill"
                   style={{ backgroundColor: '#ff4d4d', border: 'none', fontWeight: '600' }}
                 >
                   <FaPhoneAlt className="me-2" /> Call Manager
+                </a>
+                <a
+                  href={branch.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-sm w-100 text-white rounded-pill"
+                  style={{ backgroundColor: '#E4405F', border: 'none', fontWeight: '600' }}
+                >
+                  <FaInstagram className="me-2" /> Instagram
                 </a>
               </div>
 
@@ -335,23 +335,14 @@ function BranchPage() {
               </p>
             </div>
 
-            <div className="row gy-4">
+            <div className="row gy-4 justify-content-center">
               {branch.trainers.map((trainer, index) => (
                 <div className="col-lg-4 col-md-6" key={trainer.name} data-aos="fade-up" data-aos-delay={index * 100}>
                   <div className="card-glass h-100 p-4 text-center">
-                    <div className="trainer-image mb-3">
-                      <img
-                        src={trainer.image}
-                        alt={trainer.name}
-                        className="rounded-circle d-block mx-auto"
-                        style={{ width: '120px', height: '120px', objectFit: 'cover' }}
-                      />
-                    </div>
                     <h5 className="mb-2">{trainer.name}</h5>
-                    <p className="text-accent mb-2">{trainer.specialty}</p>
+                    <p className="text-white mb-2">{trainer.specialty}</p>
                     <div className="small-text mb-3">
                       <p><strong>Experience:</strong> {trainer.experience}</p>
-                      <p><strong>Certifications:</strong> {trainer.certifications}</p>
                     </div>
                     <button className="btn btn-accent btn-sm" onClick={() => document.getElementById('contact').scrollIntoView()}>
                       Book Session

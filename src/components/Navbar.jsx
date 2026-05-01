@@ -35,7 +35,7 @@ function Navbar() {
       <div className="container">
         <Link className="navbar-brand d-flex align-items-center" to="/" onClick={() => window.scrollTo(0, 0)}>
           <img src={logo} alt="M.K.Fitness" height="40" className="me-2" />
-          M.K.FITNESS
+          <span className="navbar-brand-red">M.K.FITNESS</span>
         </Link>
         <button
           className="navbar-toggler"

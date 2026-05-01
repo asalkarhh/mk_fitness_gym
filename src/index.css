@@ -73,7 +73,7 @@ section {
 
 .navbar-custom {
   background: rgba(6, 7, 8, 0.98) !important;
-  border-bottom: 1px solid rgba(114, 255, 61, 0.12);
+  border-bottom: 1px solid rgba(255, 31, 31, 0.2);
 }
 
 .navbar-brand {
@@ -81,6 +81,10 @@ section {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #fff;
+}
+
+.navbar-brand-red {
+  color: #ff1f1f;
 }
 
 .navbar-nav .nav-link {
@@ -91,7 +95,7 @@ section {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: var(--accent);
+  color: #ff1f1f;
 }
 
 .hero-section {
@@ -359,6 +363,40 @@ section {
   color: var(--accent);
 }
 
+.footer-addresses {
+  max-width: 460px;
+}
+
+.footer-addresses h6 {
+  margin-bottom: 16px;
+}
+
+.footer-address-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+.footer-address-row span {
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer-address-row p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+@media (max-width: 767px) {
+  .footer-address-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
 .form-control,
 .form-select,
 textarea.form-control {
@@ -607,6 +645,10 @@ textarea.form-control:focus {
   background: linear-gradient(135deg, #72ff3d, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.hero-brand-red {
+  color: #ff1f1f;
 }
 
 .loader-screen {

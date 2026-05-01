@@ -7,10 +7,8 @@ import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import Branches from './components/Branches.jsx'
 import Services from './components/Services.jsx'
-import Plans from './components/Plans.jsx'
 import FranchisePage from './components/FranchisePage.jsx'
 import Transformations from './components/Transformations.jsx'
-import Trainers from './components/Trainers.jsx'
 import Testimonials from './components/Testimonials.jsx'
 import ContactForm from './components/ContactForm.jsx'
 import Footer from './components/Footer.jsx'
@@ -27,9 +25,7 @@ function HomePage() {
         <About />
         <Branches />
         <Services />
-        <Plans />
         <Transformations />
-        <Trainers />
         <Testimonials />
         <ContactForm />
       </main>

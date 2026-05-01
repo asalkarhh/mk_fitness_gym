@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { FaArrowLeft, FaHandshake, FaMapMarkerAlt, FaUsers, FaChartLine, FaShieldAlt, FaStar, FaCheckCircle } from 'react-icons/fa'
 import Navbar from './Navbar.jsx'
 import Footer from './Footer.jsx'
-import FloatingActions from './FloatingActions.jsx'
 
 function FranchisePage() {
   const handleSubmit = (e) => {
@@ -364,7 +363,6 @@ function FranchisePage() {
         </section>
       </main>
       <Footer />
-      <FloatingActions />
     </div>
   )
 }

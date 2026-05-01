@@ -1,4 +1,15 @@
-import { FaDumbbell, FaRunning, FaUser, FaFireAlt, FaHeartbeat } from 'react-icons/fa'
+import {
+  FaAppleAlt,
+  FaDumbbell,
+  FaFireAlt,
+  FaHeartbeat,
+  FaHotTub,
+  FaLock,
+  FaMusic,
+  FaRunning,
+  FaShower,
+  FaUser,
+} from 'react-icons/fa'
 
 const services = [
   {
@@ -25,6 +36,41 @@ const services = [
     title: 'Muscle Gain Plans',
     description: 'Specialized hypertrophy cycles for strength gains and powerful aesthetics.',
     icon: FaHeartbeat,
+  },
+  {
+    title: 'Steam Bath',
+    description: 'Relax, recover, and refresh after intense workouts with dedicated steam bath access.',
+    icon: FaHotTub,
+  },
+  {
+    title: 'Locker Facilities',
+    description: 'Secure locker access so you can train comfortably without worrying about your belongings.',
+    icon: FaLock,
+  },
+  {
+    title: 'Shower Facility',
+    description: 'Clean shower access for a fresh post-workout routine before heading back to your day.',
+    icon: FaShower,
+  },
+  {
+    title: 'CrossFit',
+    description: 'Functional strength and conditioning workouts built around power, stamina, and mobility.',
+    icon: FaDumbbell,
+  },
+  {
+    title: 'Diet Plan Guidance',
+    description: 'Goal-focused nutrition guidance to support fat loss, muscle gain, and daily performance.',
+    icon: FaAppleAlt,
+  },
+  {
+    title: 'Zumba',
+    description: 'Fun dance-fitness sessions that combine cardio, rhythm, and full-body movement.',
+    icon: FaMusic,
+  },
+  {
+    title: 'Group Classes',
+    description: 'Motivating group workout sessions for strength, stamina, flexibility, and consistency.',
+    icon: FaUser,
   },
 ]
 
