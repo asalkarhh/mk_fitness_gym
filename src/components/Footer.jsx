@@ -37,9 +37,28 @@ function Footer() {
           </div>
         </div>
 
-        <div className="text-center mt-5 small-text">
-          © 2026 M.K. Fitness Club. All rights reserved.
-        </div>
+        <div className="container mt-4 pt-4 border-top border-secondary">
+  <div className="d-flex flex-column flex-md-row justify-content-between align-items-center w-100">
+    <p className="mb-0 text-start">
+      &copy; 2026 M.K. Fitness Club. All rights reserved.
+    </p>
+    <p className="mb-0 mt-2 mt-md-0 text-center text-md-end">
+      Developed by{' '}
+      <a 
+        href="https://asalkar.in" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-accent fw-bold"
+        style={{ textDecoration: 'none' }}
+        onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
+        onMouseOut={(e) => e.target.style.textDecoration = 'none'}
+      >
+        Asalkar Techworks
+      </a>
+    </p>
+  </div>
+</div>
+
       </div>
     </footer>
   )
