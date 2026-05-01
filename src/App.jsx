@@ -16,6 +16,7 @@ import ContactForm from './components/ContactForm.jsx'
 import Footer from './components/Footer.jsx'
 import Loader from './components/Loader.jsx'
 import BranchPage from './components/BranchPage.jsx'
+import { Analytics } from "@vercel/analytics/react"
 
 function HomePage() {
   return (
@@ -51,11 +52,14 @@ function App() {
   }
 
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/branch/:branchId" element={<BranchPage />} />
-      <Route path="/franchise" element={<FranchisePage />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/branch/:branchId" element={<BranchPage />} />
+        <Route path="/franchise" element={<FranchisePage />} />
+      </Routes>
+      <Analytics />
+    </>
   )
 }
 
