@@ -80,7 +80,7 @@ function FranchisePage() {
               </Link>
             </div>
             <span className="section-heading">Franchise Opportunity</span>
-            <h1 className="hero-title">Join M.K. Fitness Family</h1>
+            <h1 className="hero-title">Join <span className="hero-brand-bold">M.K. FITNESS FAMILY</span></h1>
             <p className="hero-copy">
               Be part of India's growing fitness revolution. Own a premium gym brand
               with proven success, comprehensive support, and unlimited growth potential.
@@ -97,7 +97,7 @@ function FranchisePage() {
         {/* Benefits Section */}
         <section className="container py-5">
           <div className="text-center mb-5" data-aos="fade-up">
-            <h2 className="section-title">Why Choose M.K. Fitness Franchise?</h2>
+            <h2 className="section-title">Why Choose M.K. FITNESS Franchise?</h2>
             <p className="section-text">
               Join a winning team with comprehensive support, proven systems, and unlimited potential
             </p>
@@ -166,25 +166,25 @@ function FranchisePage() {
             <div className="col-lg-6" data-aos="fade-left">
               <div className="card-glass p-4">
                 <h5 className="mb-3">Investment Breakdown</h5>
-                <div className="investment-breakdown">
-                  <div className="d-flex justify-content-between mb-2">
+                <div className="investment-breakdown text-white">
+                  <div className="d-flex justify-content-between mb-2 text-white">
                     <span>Franchise Fee</span>
                     <span>₹15 Lakhs</span>
                   </div>
-                  <div className="d-flex justify-content-between mb-2">
+                  <div className="d-flex justify-content-between mb-2 text-white">
                     <span>Equipment & Setup</span>
                     <span>₹25 Lakhs</span>
                   </div>
-                  <div className="d-flex justify-content-between mb-2">
+                  <div className="d-flex justify-content-between mb-2 text-white">
                     <span>Interior & Branding</span>
                     <span>₹8 Lakhs</span>
                   </div>
-                  <div className="d-flex justify-content-between mb-2">
+                  <div className="d-flex justify-content-between mb-2 text-white">
                     <span>Working Capital</span>
                     <span>₹7 Lakhs</span>
                   </div>
                   <hr className="my-3" />
-                  <div className="d-flex justify-content-between fw-bold">
+                  <div className="d-flex justify-content-between fw-bold text-white">
                     <span>Total Investment</span>
                     <span>₹55 Lakhs</span>
                   </div>
@@ -309,9 +309,9 @@ function FranchisePage() {
             </p>
           </div>
 
-          <div className="row gy-4">
-            <div className="col-lg-6" data-aos="fade-right">
-              <div className="card-glass p-4">
+          <div className="row gy-4 align-items-stretch">
+            <div className="col-lg-6 d-flex" data-aos="fade-right">
+              <div className="card-glass p-4 h-100 w-100 d-flex flex-column">
                 <h5 className="mb-3">
                   <FaMapMarkerAlt className="me-2 text-accent" />
                   Marunji Flagship Branch
@@ -329,14 +329,14 @@ function FranchisePage() {
                     title="Marunji Branch Map"
                   ></iframe>
                 </div>
-                <a className="btn btn-accent mt-3 w-100" href="https://www.google.com/maps/place/M+K+Fitness+Club/@18.6164811,73.7084411,2449m/data=!3m1!1e3!4m6!3m5!1s0x3bc2bbce5b367cdb:0xa70a1e8f6a8a9c00!8m2!3d18.6140779!4d73.7105712!16s%2Fg%2F11fqpwmwvz?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">
+                <a className="btn btn-accent mt-auto w-100" href="https://www.google.com/maps/place/M+K+Fitness+Club/@18.6164811,73.7084411,2449m/data=!3m1!1e3!4m6!3m5!1s0x3bc2bbce5b367cdb:0xa70a1e8f6a8a9c00!8m2!3d18.6140779!4d73.7105712!16s%2Fg%2F11fqpwmwvz?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">
                   Get Directions
                 </a>
               </div>
             </div>
 
-            <div className="col-lg-6" data-aos="fade-left">
-              <div className="card-glass p-4">
+            <div className="col-lg-6 d-flex" data-aos="fade-left">
+              <div className="card-glass p-4 h-100 w-100 d-flex flex-column">
                 <h5 className="mb-3">
                   <FaMapMarkerAlt className="me-2 text-accent" />
                   Punawale Branch
@@ -354,7 +354,7 @@ function FranchisePage() {
                     title="Punawale Branch Map"
                   ></iframe>
                 </div>
-                <a className="btn btn-accent mt-3 w-100" href="https://www.google.com/maps/place/M.K+fitness+club,+punawale/@18.6327957,73.7362654,728m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bc2bb4be5c319d3:0x1cedf9a8c851bdee!8m2!3d18.6327957!4d73.7388403!16s%2Fg%2F11rck3pkg5?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">
+                <a className="btn btn-accent mt-auto w-100" href="https://www.google.com/maps/place/M.K+fitness+club,+punawale/@18.6327957,73.7362654,728m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bc2bb4be5c319d3:0x1cedf9a8c851bdee!8m2!3d18.6327957!4d73.7388403!16s%2Fg%2F11rck3pkg5?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">
                   Get Directions
                 </a>
               </div>

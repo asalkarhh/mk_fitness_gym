@@ -8,7 +8,7 @@ function Footer() {
           <div className="col-md-5" data-aos="fade-right">
             <div className="d-flex align-items-center mb-3">
               <img src={logo} alt="M.K. Fitness" height="40" className="me-2" />
-              <h5 className="mb-0">M.K. Fitness Club</h5>
+              <h5 className="mb-0"><span className="navbar-brand-red">M.K. FITNESS CLUB</span></h5>
             </div>
             <p className="small-text">
               Premium fitness destinations in Marunji and Punawale with high-performance

@@ -85,6 +85,7 @@ section {
 
 .navbar-brand-red {
   color: #ff1f1f;
+  font-weight: 900;
 }
 
 .navbar-nav .nav-link {
@@ -651,6 +652,10 @@ textarea.form-control:focus {
   color: #ff1f1f;
 }
 
+.hero-brand-bold {
+  font-weight: 900;
+}
+
 .loader-screen {
   min-height: 100vh;
   width: 100%;
@@ -660,6 +665,46 @@ textarea.form-control:focus {
   z-index: 2000;
   display: flex;
   gap: 18px;
+}
+
+.loader-mark {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+  display: grid;
+  place-items: center;
+}
+
+.loader-spinner {
+  position: absolute;
+  inset: 0;
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid rgba(114, 255, 61, 0.18);
+  border-top-color: var(--accent);
+  animation: loader-spin 0.85s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+.loader-mark img {
+  position: relative;
+  z-index: 1;
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.loader-copy {
+  margin-left: 1.5rem;
+}
+
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .loader-ring {
@@ -682,4 +727,17 @@ textarea.form-control:focus {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .loader-screen {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .loader-copy {
+    margin-left: 0;
+    padding: 0 24px;
+  }
 }

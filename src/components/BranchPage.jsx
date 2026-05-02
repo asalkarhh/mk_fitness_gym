@@ -22,23 +22,28 @@ const branches = [
     },
     specs: {
       area: '10000 sq ft',
+      equipmentDetails: "Marunji branch is equipped with FITLINE, one of India's leading fitness equipment brands.",
       equipment: [
-        'Olympic weight sets',
+        'FITLINE strength machines',
         'Advanced cardio machines',
-        'Functional training area',
-        'Squat racks & Smith machines'
+        'CrossFit training setup',
+        'Free weights and functional training equipment'
       ],
       facilities: [
-        'Premium locker rooms',
-        'Showers & Steam bath',
-        'Nutrition & Protein bar',
-        'Dedicated posing area'
+        'Weight Training',
+        'Cardio',
+        'CrossFit Training',
+        'Group Batches',
+        'Locker Room',
+        'Steam Bath',
+        'Specialized Fitness Trainer'
       ],
-      capacity: '50 members per session'
+      capacity: '50 members at the same time'
     },
     plans: [
       { name: 'Monthly', price: '₹2499', features: ['Gym', 'Cardio Groups', 'Batches', 'BMI Workouts and Diet Plan', 'Floor Training Guidance', 'Locker and Steam'] },
       { name: 'Quarterly', price: '₹4999', features: ['Gym', 'Cardio Groups', 'Batches', 'BMI Workouts and Diet Plan', 'Floor Training Guidance', 'Locker and Steam'] },
+      { name: 'Half Yearly', price: '7999', features: ['Gym', 'Cardio Groups', 'Batches', 'BMI Workouts and Diet Plan', 'Floor Training Guidance', 'Locker and Steam'] },
       { name: 'Yearly', price: '₹9999', features: ['Gym', 'Cardio Groups', 'Batches', 'BMI Workouts and Diet Plan', 'Floor Training Guidance', 'Locker and Steam'] }
     ],
     images: [
@@ -87,23 +92,20 @@ const branches = [
     },
     specs: {
       area: '8000 sq ft',
+      equipmentDetails: 'Fully loaded with equipment for every single body part.',
       equipment: [
-        'Free weights & Dumbbells',
-        'Treadmills & Rowers',
-        'Cross-trainers & Ellipticals',
-        'Yoga & Stretching mats'
+        'Free weights and dumbbells',
+        'Strength machines for every body part',
+        'Cardio equipment',
+        'Group batch training equipment'
       ],
       facilities: [
-        'Clean changing rooms',
-        'Reserved parking area',
-        'Healthy Cafe zone',
-        'Recovery & Massage zone',
         'Gym',
         'Cardio',
         'Group Batches',
         'Steam'
       ],
-      capacity: '60 members per session'
+      capacity: '60 members at a time'
     },
     plans: [
       { name: 'Monthly', price: '₹2499', features: ['Gym', 'Cardio Groups', 'Batches', 'BMI Workouts and Diet Plan', 'Floor Training Guidance', 'Locker and Steam'] },
@@ -199,7 +201,7 @@ function BranchPage() {
 
         {/* Details Section */}
         <section className="container">
-          <div className="row gy-5">
+          <div className="row gy-5 align-items-stretch">
             <div className="col-lg-6 d-flex flex-column" data-aos="fade-right">
               <h2 className="section-title mb-4">Branch Details</h2>
               <div className="card-glass p-4 mb-4">
@@ -245,6 +247,8 @@ function BranchPage() {
                     <li key={idx} className="mb-1">• {item}</li>
                   ))}
                 </ul>
+
+                <p className="small-text mb-3"><strong>Equipment Details:</strong> {branch.specs.equipmentDetails}</p>
 
                 <p className="small-text mb-2"><strong>Facilities:</strong></p>
                 <ul className="list-unstyled small-text mb-0 ms-4">

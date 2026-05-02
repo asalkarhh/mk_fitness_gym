@@ -1,4 +1,9 @@
 function ContactForm({ branch }) {
+  const branchEmails = {
+    Marunji: 'marunji.mkfitnessclub@gmail.com',
+    Punawale: 'punawalemkfitness@gmail.com',
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     
@@ -6,9 +11,20 @@ function ContactForm({ branch }) {
     const phone = document.getElementById('phone').value
     const selectedBranch = branch ? branch.title : document.getElementById('branch').value
     const extraInfo = branch ? `Plan: ${document.getElementById('plan').value}` : `Query: ${document.getElementById('query').value}`
+    const branchKey = branch ? branch.title.replace(' Branch', '') : selectedBranch
 
-    const recipient = branch ? branch.manager.email : 'owner@mkfitness.com'
-    alert(`Form Submitted Successfully!\n\nName: ${name}\nPhone: ${phone}\nBranch: ${selectedBranch}\n${extraInfo}\n\nData has been sent to branch manager: ${recipient}`)
+    const recipient = branch ? branch.manager.email : branchEmails[branchKey]
+    const subject = `Free Consultation Request - ${selectedBranch}`
+    const body = [
+      'Free Consultation Request',
+      '',
+      `Name: ${name}`,
+      `Phone: ${phone}`,
+      `Branch: ${selectedBranch}`,
+      extraInfo,
+    ].join('\n')
+
+    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
   return (

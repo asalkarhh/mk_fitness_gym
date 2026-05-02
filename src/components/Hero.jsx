@@ -55,7 +55,7 @@ function Hero() {
       <div className="container hero-content" data-aos="fade-up">
         <span className="section-heading">Premium Fitness Brand</span>
         <h1 className="hero-title">
-          TRANSFORM YOUR BODY AT <span className="hero-brand-red"><br></br>M.K. FITNESS CLUB</span>
+          TRANSFORM YOUR BODY AT <span className="hero-brand-red hero-brand-bold"><br></br> M.K. FITNESS CLUB</span>
         </h1>
         <p className="hero-copy">
           Marunji &amp; Punawale शाखा उपलब्ध - join a motivated community with
